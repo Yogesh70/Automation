@@ -71,16 +71,18 @@ tabWillBeOpenedPromise
     
     .then(function () {
         // go to interview prep
-        let IpBtnWillBeFoundP = tab.findElement(swd.By.css("h3[title='Interview Preparation Kit']"));
+        // console.log("interview");
+
+        let IpBtnWillBeFoundP = tab.findElement(swd.By.css("#base-card-1-link"));
         return IpBtnWillBeFoundP;
         // data-analytics="InterviewPromotionCard"
         // console.log("Login Done")
     }).then(function (IpBtn) {
         let IPBtnWillBeClickedP = IpBtn.click();
+
         return IPBtnWillBeClickedP;
-    })
-    
-    .then(function () {
+    }).then(function () {
+
         // go to warmup challenges
         let wUCBtnWillSelectedP = tab.findElement(swd.By.css("a[data-attr1='warmup']"));
         return wUCBtnWillSelectedP;
